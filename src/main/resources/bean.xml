@@ -12,19 +12,19 @@
 
     </bean>
 
-  <!--  <bean id="actor1" class="com.stackroute.domain.Actor">
+   <bean id="actor1" class="com.stackroute.domain.Actor">
         <constructor-arg index="0" value="Ashu" type="String" />
         <constructor-arg index="1" value="Female" type="String"/>
         <constructor-arg index="2" value="22" type="int"/>
 
     </bean>
--->
 
-    <bean id="movie1" autowire="byName" class="com.stackroute.domain.Movie">
+
+    <bean id="movie1" autowire="constructor" class="com.stackroute.domain.Movie">
 
     </bean>
 
-    <bean id="movie2" autowire="byType" class="com.stackroute.domain.Movie">
+    <bean id="movie2" autowire="constructor" class="com.stackroute.domain.Movie">
 
     </bean>
 
