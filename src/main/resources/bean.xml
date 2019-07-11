@@ -5,17 +5,41 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="actor_id" class="com.stackroute.domain.Actor">
-        <property name="name" value="Asmitha" />
-        <property name="gender" value="Female" />
-        <property name="age" value="22" />
+    <bean id="actor1" class="com.stackroute.domain.Actor">
+        <constructor-arg index="0" value="Asmitha" type="String" />
+        <constructor-arg index="1" value="Female" type="String"/>
+        <constructor-arg index="2" value="22" type="int"/>
+
+    </bean>
+
+    <bean id="actor2" class="com.stackroute.domain.Actor">
+        <constructor-arg index="0" value="Ashu" type="String" />
+        <constructor-arg index="1" value="Female" type="String"/>
+        <constructor-arg index="2" value="22" type="int"/>
+
+    </bean>
+
+    <bean id="actor3" class="com.stackroute.domain.Actor">
+        <constructor-arg index="0" value="Susmitha" />
+        <constructor-arg index="1" value="Female" />
+        <constructor-arg index="2" value="23" />
 
     </bean>
 
 
-    <bean id="movie" class="com.stackroute.domain.Movie">
-        <property name="actor" ref="actor_id" />
 
+    <bean name="movie1,movie2" class="com.stackroute.domain.Movie" scope="singleton">
+        <constructor-arg index="0" ref="actor1" />
+
+    </bean>
+
+    <bean id="movie3" class="com.stackroute.domain.Movie" scope="prototype">
+        <constructor-arg index="0" ref="actor2" />
+
+    </bean>
+
+    <bean id="movie4" class="com.stackroute.domain.Movie">
+        <constructor-arg index="0" ref="actor3" />
 
     </bean>
 
