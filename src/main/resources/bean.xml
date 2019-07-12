@@ -5,7 +5,8 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="actor" class="com.stackroute.domain.Actor">
+    <bean id="cycle" class="com.stackroute.demo.BeanLifeCycleDemoBean" init-method="Init" destroy-method="clean" ></bean>
+  <!--  <bean id="actor" class="com.stackroute.domain.Actor">
         <constructor-arg index="0" value="Asmitha" type="String" />
         <constructor-arg index="1" value="Female" type="String"/>
         <constructor-arg index="2" value="22" type="int"/>
@@ -28,6 +29,8 @@
 
     </bean>
 
+    <bean name="BeanLifeCycleDemoBean" class="com.stackroute.demo.BeanLifeCycleDemoBean"></bean>
 
 
+-->
 </beans>
