@@ -12,16 +12,9 @@ public class Main {
         Movie movie = (Movie) applicationContext.getBean("movie1");
         System.out.println(movie.getActor());
 
-        Movie movie1 = applicationContext.getBean("movie2",Movie.class);
+       
 
-        System.out.println((movie1.getActor()));
 
-        XmlBeanFactory xmlBeanFactory= new XmlBeanFactory( new ClassPathResource("bean.xml"));
-        Movie movieFirst= (Movie)xmlBeanFactory.getBean("movie2");
-
-        movie.setApplicationContext(applicationContext);
-        movieFirst.setBeanFactory(xmlBeanFactory);
-        movie.setBeanName("beam123");
     }
 
 }

@@ -5,32 +5,24 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="cycle" class="com.stackroute.demo.BeanLifeCycleDemoBean" init-method="Init" destroy-method="clean" ></bean>
-  <!--  <bean id="actor" class="com.stackroute.domain.Actor">
+
+   <bean id="actor" class="com.stackroute.domain.Actor">
         <constructor-arg index="0" value="Asmitha" type="String" />
         <constructor-arg index="1" value="Female" type="String"/>
         <constructor-arg index="2" value="22" type="int"/>
 
     </bean>
 
-   <bean id="actor1" class="com.stackroute.domain.Actor">
-        <constructor-arg index="0" value="Ashu" type="String" />
-        <constructor-arg index="1" value="Female" type="String"/>
-        <constructor-arg index="2" value="22" type="int"/>
 
-    </bean>
 
 
     <bean id="movie1" autowire="constructor" class="com.stackroute.domain.Movie">
 
     </bean>
 
-    <bean id="movie2" autowire="constructor" class="com.stackroute.domain.Movie">
-
-    </bean>
-
-    <bean name="BeanLifeCycleDemoBean" class="com.stackroute.demo.BeanLifeCycleDemoBean"></bean>
 
 
--->
+    <bean name="BeanLifeCycleDemoBean" class="com.stackroute.demo.BeanLifeCyclePostProcessor"></bean>
+
+
 </beans>
